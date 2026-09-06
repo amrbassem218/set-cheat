@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "name": "set-bot",
+  "description": "Shows a small overlay UI on every web page, with an options page that moves it from right to left.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "extension": "^4.1.14"
+  },
+  "scripts": {
+    "dev": "extension dev",
+    "start": "extension start",
+    "build": "extension build",
+    "preview": "extension preview",
+    "build:chrome": "extension build --browser chrome",
+    "build:firefox": "extension build --browser firefox",
+    "build:edge": "extension build --browser edge"
+  },
+  "dependencies": {},
+  "packageManager": "npm@11.6.2"
+}
