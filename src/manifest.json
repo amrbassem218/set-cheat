@@ -6,9 +6,7 @@
   "firefox:browser_specific_settings": {
     "gecko": {
       "data_collection_permissions": {
-        "required": [
-          "none"
-        ]
+        "required": ["none"]
       }
     }
   },
@@ -25,26 +23,16 @@
     "page": "options/index.html",
     "open_in_tab": false
   },
-  "permissions": [
-    "storage"
-  ],
-  "host_permissions": [
-    "<all_urls>"
-  ],
+  "permissions": ["storage"],
+  "host_permissions": ["https://setwithfriends.com/game/*"],
   "background": {
     "chromium:service_worker": "background.ts",
-    "firefox:scripts": [
-      "background.ts"
-    ]
+    "firefox:scripts": ["background.ts"]
   },
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "content/scripts.ts"
-      ]
+      "matches": ["https://setwithfriends.com/game/*"],
+      "js": ["content/scripts.ts"]
     }
   ]
 }
