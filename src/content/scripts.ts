@@ -278,5 +278,5 @@ async function fetchDOM() {
       active_cards[index].children[0].click();
     }
     // console.log(set_indices);
-  }, 1000);
+  }, 100);
 }
