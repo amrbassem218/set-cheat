@@ -195,11 +195,6 @@ const getActiveCardsProps = (active_cards: any) => {
       });
     }
 
-    // console.log("card_no: ", card_no);
-    // console.log("card_shape:", card_shape);
-    // console.log("card_color:", card_color);
-    // console.log("card_fill:", card_fill);
-    // console.log("****************************");
     cards_props.push({
       index: i,
       number: card_no,
@@ -246,7 +241,6 @@ const analyzeCards = (cards_props: Card[]) => {
             cards_props[j].index,
             cards_props[k].index,
           ];
-          console.log("A7a set found");
           console.log(decodeCards(cards_props[i]));
           console.log(decodeCards(cards_props[j]));
           console.log(decodeCards(cards_props[k]));
@@ -280,6 +274,9 @@ async function fetchDOM() {
     let cards_props: Card[] = getActiveCardsProps(active_cards);
 
     let set_indices = analyzeCards(cards_props);
+    for (let index of set_indices) {
+      active_cards[index].children[0].click();
+    }
     // console.log(set_indices);
   }, 1000);
 }
